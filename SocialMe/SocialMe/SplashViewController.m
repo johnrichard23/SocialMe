@@ -7,6 +7,7 @@
 //
 
 #import "SplashViewController.h"
+#import <QuartzCore/QuartzCore.h>
 
 
 @interface SplashViewController ()
@@ -22,6 +23,10 @@
         // Custom initialization
     }
     return self;
+}
+
+-(UIStatusBarStyle)preferredStatusBarStyle{
+    return UIStatusBarStyleLightContent;
 }
 
 - (void)viewDidLoad
@@ -47,6 +52,7 @@
         
     }
 }
+
 
 - (void) runSpinAnimationOnView:(UIView*)view duration:(CGFloat)duration rotations:(CGFloat)rotations repeat:(float)repeat;
 {

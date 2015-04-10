@@ -8,7 +8,7 @@
 
 #import "AppDelegate.h"
 #import "SplashViewController.h"
-#import <Parse/Parse.h>
+
 
 @implementation AppDelegate
 

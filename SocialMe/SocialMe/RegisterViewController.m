@@ -57,9 +57,8 @@
     
     [_uNameField resignFirstResponder];
     [_passwordField resignFirstResponder];
-    [_passwordField resignFirstResponder];
     [_rePasswordField resignFirstResponder];
- //   [_emailField resignFirstResponder];
+    [_emailField resignFirstResponder];
     [self checkFieldsComplete];
     
     
@@ -89,7 +88,6 @@
     
     else
     {
-        
         [self registerUser];
     }
 }

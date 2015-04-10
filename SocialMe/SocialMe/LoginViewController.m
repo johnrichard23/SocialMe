@@ -35,6 +35,43 @@
     // Dispose of any resources that can be recreated.
 }
 
+#pragma mark - UITextField Delegates
+-(BOOL)textFieldShouldReturn:(UITextField *)textField
+{
+    [textField resignFirstResponder];
+    return YES;
+}
+
+#pragma mark - Login
+
+- (IBAction)loginPressed:(id)sender {
+  //  [self.view makeToastActivity];
+    
+    
+    
+    [PFUser logInWithUsernameInBackground:_field_userName.text password:_fieldPassword.text
+                                    block:^(PFUser *user, NSError *error) {
+                                        if (user) {
+             //                               [self.view hideToastActivity];
+                                            
+                                            
+                                            [self performSegueWithIdentifier:@"goToTabbar" sender:self];
+                                            
+                                            
+                                            
+                                        } else {
+      //                                      [self.view makeToast:@"Invalid Login, Try Again" duration:2.0 position:@"center"];
+        //                                    [self.view hideToastActivity];
+                                        }
+                                    }];
+    
+}
+
+- (IBAction)cancelPressed:(id)sender {
+    
+    [self.navigationController popViewControllerAnimated:YES];
+}
+
 /*
 #pragma mark - Navigation
 
